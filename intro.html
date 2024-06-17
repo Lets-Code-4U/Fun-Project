@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enlarged</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    main {
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        align-items: center;
+    }
+
+    .balls {
+        height: 180px;
+        width: 130px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle {
+        height: 100%;
+        width: 100%;
+        background-color: rgb(57, 42, 42, 50);
+        border: none;
+        border-radius: 50%;
+    }
+
+    @keyframes size {
+        0% {
+            width: 200px;
+            height: 95px;
+        }
+
+        50% {
+            width: 360px;
+            height: 110px;
+        }
+    }
+
+    .back {
+        height: 95px;
+        width: 200px;
+        background-color: rgb(57, 42, 42, 50);
+        border: none;
+        border: none;
+        border-radius: 10px 10px 10px 10px;
+        /* animation: size 4s infinite ease-in-out; */
+    }
+
+    .front {
+        height: 125px;
+        width: 110px;
+    }
+
+    .up-front {
+        background-color: rgb(171, 64, 82);
+        height: 50%;
+        width: 100%;
+        border: none;
+        border-radius: 20px 40px 20px 0px;
+    }
+
+    .bottom-front {
+        background-color: rgb(171, 64, 82);
+        height: 50%;
+        width: 100%;
+        border: none;
+        border-radius: 0px 20px 40px 20px;
+    }
+
+    .mid-front {
+        height: 10%;
+        width: 100%;
+    }
+
+    .buttons {
+        position: absolute;
+        bottom: 250px;
+        left: 100px;
+        display: flex;
+        gap: 30px;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+    }
+    .msg{
+        display: none;
+    }
+    .warn{
+        display: none;
+    }
+    .btn{
+       padding: 5px 15px;
+       font-size: 15px;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       background-color: rgb(0, 255, 255);
+       border: none;
+       outline: none;
+       border-radius: 5px;
+    }
+</style>
+
+<body>
+    <main>
+        <div class="balls">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+        <div class="back">
+        </div>
+
+        <div class="front">
+            <div class="up-front"></div>
+            <div class="bottom-front"></div>
+        </div>
+        <div class="buttons">
+            <button class="btn start">Start</button>
+            <button class="btn speed">Speed</button>
+            <button class="btn stop">Stop</button>
+            <msg class="msg"> First start fucking "Baby".</msg>
+            <warn class="warn">I can't stop baby let me fuck you !</warn>
+        </div>
+    </main>
+    <script src="intro.js"></script>
+</body>
+
+</html>
