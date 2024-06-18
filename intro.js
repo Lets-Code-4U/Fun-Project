@@ -13,6 +13,12 @@ speedBtn.onclick = () => {
 };
 
 startBtn.addEventListener("click", () => {
+  function sound1() {
+    var audio1 = new Audio("assets/sound1.wav");
+    audio1.loop = true;
+    audio1.play();
+  }
+  sound1();
   midPart.style.animation = "size 6s infinite ease-in-out";
   startBtn.style.display = "none";
   msgDisplay.style.display = "none";
@@ -20,6 +26,12 @@ startBtn.addEventListener("click", () => {
 });
 
 speedBtn.addEventListener("click", () => {
+  function sound2() {
+    var audio1 = new Audio("assets/sound2.wav");
+    audio1.loop = true;
+    audio1.play();
+  }
+  sound2();
   if (toggle == 1) {
     if (count == 1) {
       midPart.style.animation = "size 3s infinite ease-in-out";
@@ -40,7 +52,8 @@ speedBtn.addEventListener("click", () => {
       midPart.style.animation = "size 0.1s infinite ease-in-out";
     }
     if (count >= 7) {
-      speedMsg.innerHTML = "Abe Randi Saale Gand hai ki gufa! Ruk ja madharchod kitan maraega!";
+      speedMsg.innerHTML =
+        "Abe Randi Saale Gand hai ki gufa! Ruk ja madharchod kitan maraega!";
     }
   } else {
     msgDisplay.style.display = "inherit";
